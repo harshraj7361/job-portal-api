@@ -21,6 +21,13 @@ class jobcreation(BaseModel):
 @app.get("/")
 def home():
     return {"message: api is running"}
+@app.get("/api/health")
+async def health_check():
+    return {
+        "status": "online",
+        "message": "Job POrtal API is running smoothly.",
+        "version": "2.0.0"
+    }
 
 def load_data():
     with open("jobs.json" , "r") as f:
