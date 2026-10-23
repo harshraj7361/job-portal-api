@@ -25,7 +25,7 @@ def home():
 async def health_check():
     return {
         "status": "online",
-        "message": "Job POrtal API is running smoothly.",
+        "message": "Job Portal API is running smoothly.",
         "version": "2.0.0"
     }
 
